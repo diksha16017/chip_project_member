@@ -8,7 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_margin="10dp"
         android:clickable="true"
         android:focusableInTouchMode="true"
         tools:context="com.example.root.chips_projects.AddProjectMainActivity">
@@ -17,6 +16,9 @@
             android:id="@+id/projectNameEditText"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:hint="Project Name"
             android:gravity="center"
             android:textColorHint="@android:color/darker_gray"
@@ -28,6 +30,8 @@
         <EditText
             android:id="@+id/descriptionEditText"
             android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:hint="Description"
@@ -44,6 +48,8 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:hint="Skills"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:gravity="center"
             android:textColorHint="@android:color/darker_gray"
             android:textSize="16sp"
@@ -54,6 +60,7 @@
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:orientation="horizontal"
+            android:layout_margin="10dp"
             android:layout_height="wrap_content">
 
             <Spinner
@@ -87,6 +94,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="MEMBERS"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:background="@color/colorPrimary"
             android:textSize="16sp"
             android:paddingTop="5dp"
@@ -103,6 +112,8 @@
             android:imeOptions="actionDone"
             android:layout_marginTop="10dp"
             android:hint="Add Member"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:inputType="text|textNoSuggestions|textMultiLine"
             android:layout_gravity="center_horizontal"
             android:textAlignment="center"
