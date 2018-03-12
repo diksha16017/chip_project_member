@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 import com.tokenautocomplete.TokenCompleteTextView;
 import java.util.ArrayList;
@@ -25,6 +26,8 @@ public class AddProjectMainActivity extends AppCompatActivity implements TokenCo
     private EditText mDescriptionEditText ;
     private EditText mSkillsEditText ;
     private Button mDoneButton ;
+    private Spinner mCreditsSpinner;
+    private EditText mVacancyEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +59,9 @@ public class AddProjectMainActivity extends AppCompatActivity implements TokenCo
         mProjectNameEditText = (EditText) findViewById(  R.id.projectNameEditText) ;
         mDescriptionEditText = (EditText) findViewById(R.id.descriptionEditText ) ;
         mSkillsEditText = (EditText) findViewById(R.id.skillsEditText ) ;
+        mVacancyEditText = (EditText) findViewById(R.id.vacancyEditText ) ;
         mDoneButton = (Button ) findViewById( R.id.doneButtonProject ) ;
+        mCreditsSpinner = (Spinner) findViewById(R.id.spinner_credits_project);
 
         mDoneButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,9 +71,12 @@ public class AddProjectMainActivity extends AppCompatActivity implements TokenCo
                 for (int i = 0; i < tokens.size(); i++) {
                     content.append(tokens.get(i)).append("; ");
                 }
+
+                String credits = String.valueOf(mCreditsSpinner.getSelectedItem());
                 String name = mProjectNameEditText.getText().toString().toUpperCase();
                 String roll = mDescriptionEditText.getText().toString();
-                Toast.makeText( AddProjectMainActivity.this , name+" ("+roll+") choose: " + content.toString() , Toast.LENGTH_SHORT).show();
+                String vacancy = mVacancyEditText.getText().toString();
+                Toast.makeText( AddProjectMainActivity.this , name+" ("+roll+" "+ vacancy +" "+credits+" ) choose: " + content.toString() , Toast.LENGTH_LONG).show();
             }
         });
 
