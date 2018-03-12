@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Chips_Projects</string>
+    <string name="projects_credits_prompt">Credits</string>
+
+    <string-array name="credits">
+        <item>Credits</item>
+        <item>2 credits</item>
+        <item>4 credits</item>
+        <item>8 credits</item>
+        <item>16 credits</item>
+    </string-array>
+
+</resources>
